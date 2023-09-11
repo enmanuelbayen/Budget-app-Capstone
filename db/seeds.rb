@@ -6,4 +6,7 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-
+# User.create(name: 'enma')
+# purchase = Purchase.create(name: 'pants', author: user, amount: 4)
+# group = Group.create(name: 'cloth store', icon: 'icon.jpg', author: user)
+# group.purchases << purchase
