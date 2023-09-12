@@ -1,6 +1,7 @@
-<h2>Log in</h2>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <%= render partial: 'shared/navbar', locals: { navbar_title: 'Log In', left_button: 'Back', right_button: f.submit("Log in") } %>
+
   <div class="field">
     <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: " Email", class: "" %>
   </div>
@@ -15,10 +16,6 @@
       <%= f.label :remember_me %>
     </div>
   <% end %>
-
-  <div class="actions">
-    <%= f.submit "Log in" %>
-  </div>
 <% end %>
 
 <%= render "devise/shared/links" %>
