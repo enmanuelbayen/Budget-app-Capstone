@@ -1,9 +1,9 @@
 class GroupsController < ApplicationController
   def index
-    if current_user
-      @user = current_user
-      @groups = @user.groups.includes(:purchases)
-    end
+    return unless current_user
+
+    @user = current_user
+    @groups = @user.groups.includes(:purchases)
   end
 
   def new
@@ -11,8 +11,7 @@ class GroupsController < ApplicationController
   end
 
   def create
-    @group = Group.new(group_params)
-    @group.user = current_user
+    @group = current_user.groups.new(group_params)
     if @group.save
       redirect_to groups_path
     else

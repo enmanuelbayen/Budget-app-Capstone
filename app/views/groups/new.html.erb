@@ -1,2 +1,19 @@
-<h1>Groups#new</h1>
-<p>Find me in app/views/groups/new.html.erb</p>
+<%= form_with model:Group do |f| %>
+  <%= render partial: 'shared/navbar', locals: {navbar_title: 'ADD CATEGORY', left_button: 'Back', right_button: 'Search' } %>
+  
+  <section class="flex flex-col m-auto py-4 gap-4 bg-[#F0F2F1] pb-32 pt-20 mt-2">
+  
+  <div class="field">
+    <%= f.text_field :name, placeholder: 'Name', value: '', required: true, class: "w-full border-gray-200"%>
+  </div>
+  
+  <div class="p-4 bg-white flex flex-col gap-2">
+    <%= f.label :icon %>
+    <%= f.file_field :icon %>
+  </div>
+      
+  <div class="absolute bottom-0 w-full bg-secondary flex items-center justify-center h-16">
+    <%= f.submit "Create Category", class: "border-solid border-white py-1 border-2 cursor-pointer w-11/12 text-white font-light text-lg" %>
+  </div>
+<%end%>
+</section>
