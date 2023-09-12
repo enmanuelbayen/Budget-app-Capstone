@@ -6,8 +6,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  has_many :groups
-  has_many :purchases
+  has_many :groups, dependent: :destroy, foreign_key: 'author_id'
+  has_many :purchases, dependent: :destroy, foreign_key: 'author_id'
 
   validates :name, presence: true, length: { maximum: 250, message: '%<count>s characters is the maximum allowed' }
 end
