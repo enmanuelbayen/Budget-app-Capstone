@@ -2,7 +2,7 @@ class PurchasesController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @purchases = Purchase.all
+    @purchases = Purchase.all.order(created_at: :desc)
     @group = Group.find(params[:group_id])
   end
 
