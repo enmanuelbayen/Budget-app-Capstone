@@ -3,7 +3,7 @@
 <section class='w-11/12 m-auto bg-white shadow-md mb-20'>
     <div class="w-11/12 mt-5 m-auto pt-5">
         <div class="flex gap-4 items-center border-b pb-6">
-            <img src='<%= @group.icon %>' alt='Group Icon' class="w-24 h-16">
+            <%= image_tag(@group.icon, class: "w-20 h-20") %>
             <h2 class="text-left break-words text-gray-500 text-lg"><%= @group.name %></h2>
         </div>
     </div>

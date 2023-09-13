@@ -8,7 +8,7 @@
       <%= link_to group_purchases_path(group) do %>
         <li class="bg-white flex items-start p-5 justify-between shadow-md h-28">
           <div class="flex gap-3">
-            <img src='<%= group.icon %>' alt='Group Icon' class="w-24 h-16">
+          <%= image_tag(group.icon, class: "w-20 h-20") %>
             <div class="flex flex-col justify-between">
               <p class="text-left break-words text-gray-500"><%= group.name.capitalize %></p>
               <p class="text-left text-sm text-gray-500"><%= group.created_at.strftime('%e %b %Y') %></p>

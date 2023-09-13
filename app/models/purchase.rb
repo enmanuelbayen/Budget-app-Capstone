@@ -3,4 +3,5 @@ class Purchase < ApplicationRecord
   has_and_belongs_to_many :groups, dependent: :destroy
 
   validates :name, presence: true, length: { maximum: 250, message: '%<count>s characters is the maximum allowed' }
+  validates :amount, presence: true
 end
