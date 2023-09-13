@@ -1,5 +1,5 @@
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= render partial: 'shared/navbar', locals: {navbar_title: 'Sign Up', left_button: 'Back', right_button: f.submit("Sign up") } %>
+  <%= render partial: 'shared/navbar', locals: {navbar_title: 'Sign Up', left_button: root_path, right_button: f.submit("Sign up") } %>
   
   <%= render "devise/shared/error_messages", resource: resource %>
     
