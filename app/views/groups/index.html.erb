@@ -5,7 +5,7 @@
 <main>
   <ul class="flex flex-col gap-3 w-11/12 m-auto mt-4">
     <% @groups.each do |group| %>
-      <a href="#">
+      <%= link_to group_purchases_path(group) do %>
         <li class="bg-white flex items-start p-5 justify-between shadow-md h-28">
           <div class="flex gap-3">
             <img src='<%= group.icon %>' alt='Group Icon' class="w-24 h-16">
@@ -16,7 +16,7 @@
           </div>
           <p class="font-bold">$<%= total_transactions(group) %></p>
         </li>
-      </a>
+      <% end %>
     <% end %>
   </ul>
 
