@@ -4,10 +4,10 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   devise_for :users
 
-  resources :groups, only: [:index, :new, :create]
-  resources :purchases, only: [:index, :new, :create]
+  resources :groups, only: [:index, :new, :create] do
+    resources :purchases, only: [:index, :new, :create ]
+  end
   
-
   root "groups#index"
 
 end
