@@ -14,7 +14,7 @@
       <%= fields_for :group_entities do |group_purchase| %>
         <%= group_purchase.label :group_id, class: "mr-2" %>
         <div class="flex flex-wrap gap-2 items-center">
-          <%= group_purchase.collection_check_boxes :group_id, Group.all, :id, :name, { multiple: true } %>
+          <%= group_purchase.collection_check_boxes :group_id, Group.where(author_id: current_user.id), :id, :name, { multiple: true } %>
         </div>
         <%= group_purchase.hidden_field :purchase_id, value: @purchase.id %>
       <%end%>
