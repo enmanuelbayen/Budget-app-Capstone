@@ -1,0 +1,26 @@
+<%= render partial: 'shared/navbar', locals: { navbar_title: 'Transactions', left_button: groups_path, right_button: 'Search'} %>
+
+<section class='w-11/12 m-auto bg-white shadow-md mb-20'>
+    <div class="w-11/12 mt-5 m-auto pt-5">
+        <div class="flex gap-4 items-center border-b pb-6">
+            <%= image_tag(@group.icon, class: "w-20 h-20") %>
+            <h2 class="text-left break-words text-gray-500 text-lg"><%= @group.name %></h2>
+        </div>
+    </div>
+    <div class="flex justify-between items-center py-4 border-b w-11/12 m-auto">
+        <p class="text-textGray">TOTAL PAYMENT</p>
+        <p class="font-bold text-textGray">$<%= total_transactions(@group) %></p>
+    </div>
+    <ul>
+        <% @group.purchases.each do |purchase| %>
+            <li class="flex justify-between w-11/12 m-auto py-4 border-b">
+                <p class="text-left break-words text-gray-500"><%= purchase.name %></p>
+                <p class="text-gray-500">$<%= purchase.amount %></p>
+            </li>
+        <% end %>
+    </ul>
+</section>
+
+<div class="fixed bottom-0 w-full items-center justify-center bg-secondary p-4 border-t-2 border-gray-400 shadow-md">
+  <%= link_to "New Transaction", new_group_purchase_path(@group), class: "block w-full p-4 text-center uppercase bg-transparent border-2 border-white text-white" %>
+</div>

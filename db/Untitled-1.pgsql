@@ -1,0 +1,4 @@
+-- SELECT * from users;
+-- SELECT * from groups;
+-- SELECT * from purchases;
+--   password: <%= ENV["BUDGET_APP_CAPSTONE_DATABASE_PASSWORD"] %>

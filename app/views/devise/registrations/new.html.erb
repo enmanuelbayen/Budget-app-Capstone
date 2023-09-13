@@ -1,0 +1,31 @@
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= render partial: 'shared/navbar', locals: {navbar_title: 'Sign Up', left_button: root_path, right_button: f.submit("Sign up") } %>
+  
+  <%= render "devise/shared/error_messages", resource: resource %>
+    
+  <section class="flex flex-col m-auto py-4 gap-4 bg-[#F0F2F1] pb-32 pt-20 mt-2 h-[100vh]">
+    
+    <div class="field">
+      <%= f.text_field :name, autofocus: true, autocomplete: "name", placeholder: " First name", class: "w-full border-gray-200" %>
+    </div>
+
+    <div class="field">
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: " Email", class: "w-full border-gray-200" %>
+    </div>
+
+    <div class="field">
+      <% if @minimum_password_length %>
+        <em>(<%= @minimum_password_length %> characters minimum)</em>
+      <% end %><br />
+      <%= f.password_field :password, autocomplete: "new-password", placeholder: " Password", class: "w-full border-gray-200" %>
+    </div>
+
+    <div class="field">
+      <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: " Confirm password", class: "w-full border-gray-200" %>
+    </div>
+  <% end %>
+
+  <div class="w-full text-center">
+    <%= render "devise/shared/links" %>
+  </div>
+  </section>
