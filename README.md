@@ -69,14 +69,14 @@
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- - Not available
+
 
 ## 🚀 Live Demo <a name="live-demo"></a> -->
 
 
-<!-- - [Live Demo Link](<replace-with-your-deployment-URL>)
+[Live Demo Link](<replace-with-your-deployment-URL>)
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p> -->
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
 
@@ -140,21 +140,19 @@ control + c
 rspec spec
 ```
 
-<!-- ### Deployment
+### Deployment
 
 You can deploy this project using:
 
-<!--
+
 Example:
 
 ```sh
 
 ```
- -->
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- AUTHORS -->
 
 ## 👥 Authors <a name="authors"></a>
 
@@ -199,7 +197,9 @@ If you like this project,please give it a ⭐️!
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-We would like to thank Microverse for giving us the opportunity to learn and grow as developers and also We like to thank our family, they are all our support. 🌟
+- I would like to thank to my family and God for the opportunities to always improve despite adversity, my girlfriend and friends for being there for me, and Microverse for providing a platform to achieve this goal. 🌟
+
+> Original design idea by [Gregoire Vella on Behance.](https://www.behance.net/gregoirevella)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
