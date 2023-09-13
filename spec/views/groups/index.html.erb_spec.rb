@@ -4,9 +4,10 @@ RSpec.describe 'groups/index.html.erb', type: :system, js: true do
   describe 'Index page' do
     before(:each) do
       file = File.open(Rails.root.join('app', 'assets', 'images', 'planetbg.jpg'))
-      @user = User.create(name: 'test', email: 'test@example.com', password: 'password', password_confirmation: 'password')
+      @user = User.create(name: 'test', email: 'test@example.com', password: 'password',
+                          password_confirmation: 'password')
       @group = Group.create(name: 'Macdonald', icon: { io: file, filename: 'planetbg.jpg', content_type: 'image/jpeg' },
-      author_id: @user.id)
+                            author_id: @user.id)
       sign_in @user
       visit groups_path
     end

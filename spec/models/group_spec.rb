@@ -1,7 +1,7 @@
 require './spec/rails_helper'
 
 RSpec.describe Group, type: :model do
-  let!(:user) do 
+  let!(:user) do
     User.create(name: 'Enma', email: 'ej@gmail', password: '123456', password_confirmation: '123456')
   end
 
