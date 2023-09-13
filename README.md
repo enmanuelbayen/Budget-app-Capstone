@@ -30,6 +30,7 @@
 # 📖 Budget App <a name="about-project"></a>
 
 > Budget App Project is a web application designed to help users manage their finances and track their expenses. Users can create budgets, categorize their spending. In addition, users can generate financial reports based on their budget data and sign up with a username and password to access these features. The app is built using Ruby on Rails (RoR) for a seamless and user-friendly budgeting experience.
+[Here you have a video to show the app in less than 5 mins!]()
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -139,18 +140,6 @@ rails tailwindcss:watch
 control + c
 rspec spec
 ```
-
-### Deployment
-
-You can deploy this project using:
-
-
-Example:
-
-```sh
-
-```
-
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

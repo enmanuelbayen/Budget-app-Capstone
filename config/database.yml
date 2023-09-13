@@ -22,4 +22,4 @@ production:
   <<: *default
   database: Budget_app_Capstone_production
   username: Budget_app_Capstone
-  password: <%= ENV["BUDGET_APP_CAPSTONE_DATABASE_PASSWORD"] %>
+  password: <%= ENV["DATABASE_URL"] %>
