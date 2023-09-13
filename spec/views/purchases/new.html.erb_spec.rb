@@ -15,7 +15,7 @@ RSpec.describe 'purchases/new.html.erb', type: :system do
     end
 
     it 'displays the page title' do
-      expect(page).to have_content('TRANSACTION')
+      expect(page).to have_content('Add Transaction')
     end
 
     it 'displays the navigation bar' do

@@ -13,7 +13,7 @@ RSpec.describe 'groups/new.html.erb', type: :system do
     end
 
     it 'displays the page title' do
-      expect(page).to have_content('ADD CATEGORY')
+      expect(page).to have_content('Add Category')
     end
 
     it 'displays the navigation bar' do

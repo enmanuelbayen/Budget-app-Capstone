@@ -1,4 +1,4 @@
-<%= render partial: 'shared/navbar', locals: { navbar_title: 'TRANSACTION', left_button: group_purchases_path(@group), right_button: 'Search'} %>
+<%= render partial: 'shared/navbar', locals: { navbar_title: 'Add Transaction', left_button: group_purchases_path(@group), right_button: 'Search'} %>
 
 <%= form_with model: [@group, @purchase] do |f| %>
   <section class="flex flex-col py-4 gap-4 bg-[#F0F2F1] mt-2">
